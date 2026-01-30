@@ -1,0 +1,27 @@
+version: 2
+
+builds:
+  - binary: snap
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+
+brews:
+  - repository:
+      owner: crush
+      name: homebrew-tap
+    commit_author:
+      name: crush
+      email: crushonuuuuuuuu@outlook.com
+    directory: Formula
+    homepage: https://github.com/crush/snap
+    description: local file sharing
+    install: bin.install "snap"

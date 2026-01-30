@@ -1,23 +1,29 @@
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│   / trash                                                    │
-│   trash cli for macos                                        │
+│   / snap                                                     │
+│   local file sharing                                         │
 └──────────────────────────────────────────────────────────────┘
 ```
 
 ```bash
 > what is this?
 
-  move files to trash, list, restore, or empty. like linux trash-cli.
+  share files on your local network. no cloud, no accounts, no airdrop.
+
+> how?
+
+  snap file.pdf
+
+  starts a local server, shows a qr code. anyone on the same wifi can download.
 
 > features?
 
-  ✓ move files to trash instead of rm
-  ✓ list trashed files
-  ✓ restore files from trash
-  ✓ empty trash
+  ✓ zero config
+  ✓ qr code in terminal
+  ✓ works with any device
+  ✓ auto-closes after download
 
 > install?
 
-  cargo install trash
+  curl -fsSL raw.githubusercontent.com/crush/snap/main/i | sh
 ```
